@@ -3,7 +3,7 @@
 -- FROM lieu 
 -- WHERE nom_lieu LIKE '%um'
 
-/* 2 Nombre de personnagespar lieu (trié par nombre de personnagesdécroissant). */
+/* 2 Nombre de personnagespar lieu (trié par nombre de personnages décroissant). */
 -- SELECT COUNT(id_personnage) AS nombre_d_habitant,id_lieu
 -- FROM personnage
 -- GROUP BY id_lieu
@@ -14,3 +14,4 @@
 -- FROM personnage
 -- ORDER BY id_lieu, nom_personnage
 
+/* 4 Nom  des  spécialités  avec  nombre  de personnages par  spécialité  (trié  par  nombre  de personnages décroissant). */
