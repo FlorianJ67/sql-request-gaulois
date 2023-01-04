@@ -28,3 +28,9 @@
 -- ORDER BY date_bataille DESC
 
 /* 6 Nom des potions + coût de réalisation de la potion (trié par coût décroissant). */
+-- SELECT nom_potion AS 'Potion', SUM(cout_ingredient * qte) AS 'Cout de réalisation'
+-- FROM potion, composer, ingredient
+-- WHERE potion.id_potion = composer.id_potion AND composer.id_ingredient = ingredient.id_ingredient
+-- GROUP BY potion.id_potion
+-- ORDER BY SUM(cout_ingredient * qte) DESC
+
