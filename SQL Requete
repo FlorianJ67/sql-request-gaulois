@@ -34,3 +34,8 @@
 -- GROUP BY potion.id_potion
 -- ORDER BY SUM(cout_ingredient * qte) DESC
 
+/* 7 Nom des ingrédients + coût + quantité de chaque ingrédient qui composent la potion 'Santé'. */
+-- SELECT nom_ingredient AS 'Ingrédient', cout_ingredient AS 'Cout/u', qte AS 'Quantité'
+-- FROM potion,composer,ingredient
+-- WHERE potion.id_potion = composer.id_potion AND composer.id_ingredient = ingredient.id_ingredient AND nom_potion = 'Santé'
+
