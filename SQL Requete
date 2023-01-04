@@ -1,4 +1,4 @@
-/* 1 */
+/* 1 Nom des lieuxqui finissent par'um'. */
 -- SELECT *
 -- FROM lieu 
 -- WHERE nom_lieu LIKE '%um'
