@@ -8,3 +8,9 @@
 -- FROM personnage
 -- GROUP BY id_lieu
 -- ORDER BY COUNT(id_personnage) DESC 
+
+/* 3 Nom des personnages+ spécialité + adresse et lieu d'habitation, triés par lieu puis par nom de personnage. */
+-- SELECT nom_personnage, id_specialite, adresse_personnage , id_lieu
+-- FROM personnage
+-- ORDER BY id_lieu, nom_personnage
+
