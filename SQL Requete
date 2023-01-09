@@ -94,4 +94,11 @@
 -- GROUP BY l.nom_lieu
 --     )
 
-/* 14 Nom despersonnagesqui n'ont jamais bu aucunepotion */
+/* 14 Nom des personnages qui n'ont jamais bu aucune potion */
+-- SELECT nom_personnage
+-- FROM personnage
+-- LEFT JOIN boire ON boire.id_personnage = personnage.id_personnage
+-- WHERE ISNULL(boire.id_personnage)
+
+/* 15 Nom du / des personnages qui n'ont pas le droit de boire de la potion 'Magique'. */
+
