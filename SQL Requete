@@ -101,4 +101,9 @@
 -- WHERE ISNULL(boire.id_personnage)
 
 /* 15 Nom du / des personnages qui n'ont pas le droit de boire de la potion 'Magique'. */
-
+/*MARCHE PAS*/
+SELECT nom_personnage
+FROM personnage p
+LEFT JOIN boire b ON b.id_personnage = p.id_personnage
+WHERE b.id_potion = 1
+AND (dose_boire = 0 OR ISNULL(b.id_personnage))
