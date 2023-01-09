@@ -73,3 +73,25 @@
 -- GROUP BY casque.id_type_casque
 -- ORDER BY SUM(cout_casque) DESC
 
+/* 12 Nom des potions dont un des ingrédients est le poisson frais. */
+-- SELECT nom_potion
+-- FROM potion
+-- INNER JOIN composer ON composer.id_potion = potion.id_potion
+-- INNER JOIN ingredient ON ingredient.id_ingredient = composer.id_ingredient
+-- WHERE ingredient.nom_ingredient = 'Poisson frais'
+
+/* 13 Nom du / des lieu(x) possédant le plus d'habitants, en dehors du village gaulois. */
+-- SELECT nom_lieu AS 'nlieu',COUNT(id_personnage) AS population
+-- FROM lieu
+-- INNER JOIN personnage ON personnage.id_lieu = lieu.id_lieu
+-- WHERE nom_lieu != 'Village gaulois'
+-- GROUP BY nlieu
+-- HAVING population >= ALL (
+-- SELECT COUNT(p.id_personnage)
+-- FROM lieu l
+-- INNER JOIN personnage p ON p.id_lieu = l.id_lieu
+-- WHERE nom_lieu != 'Village gaulois'
+-- GROUP BY l.nom_lieu
+--     )
+
+/* 14 Nom despersonnagesqui n'ont jamais bu aucunepotion */
