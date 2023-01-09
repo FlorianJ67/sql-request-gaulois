@@ -39,13 +39,17 @@
 -- FROM potion,composer,ingredient
 -- WHERE potion.id_potion = composer.id_potion AND composer.id_ingredient = ingredient.id_ingredient AND nom_potion = 'Santé'
 
-/*!!!EN COURS, NE MARCHE PAS CORRECTEMENT!!!*/
 /* 8 Nom du ou des personnages qui ont pris le plus de casques dans la bataille 'Bataille du village gaulois'. */
-SELECT nom_personnage, COUNT(prendre_casque.id_casque) * qte AS total
-FROM prendre_casque, personnage, bataille, casque
-WHERE prendre_casque.id_personnage = personnage.id_personnage 
-	AND prendre_casque.id_casque = casque.id_casque 
-	AND prendre_casque.id_bataille = bataille.id_bataille 
-	AND nom_bataille = 'Bataille du village gaulois'
-GROUP BY nom_personnage
-ORDER BY COUNT(prendre_casque.id_casque) * qte DESC
+-- SELECT personnage.nom_personnage AS perso, qte AS total
+-- FROM prendre_casque, personnage, bataille
+-- WHERE prendre_casque.id_personnage = personnage.id_personnage
+-- AND prendre_casque.id_bataille = bataille.id_bataille
+-- AND nom_bataille = 'Bataille du village gaulois'
+-- AND qte = (
+-- SELECT MAX(qte)
+-- FROM prendre_casque
+-- )
+-- GROUP BY perso, total
+
+/* 9 Nom des personnageset leur quantité de potion bue (en les classant du plus grand buveur au plus petit). */
+
