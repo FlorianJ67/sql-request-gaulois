@@ -58,3 +58,18 @@
 -- GROUP BY perso
 -- ORDER BY 'potion bue' DESC
 
+/* 10 Nom de la bataille où le nombre de casques pris a été le plus important. */
+-- SELECT bataille.nom_bataille AS 'nom de la bataille', SUM(qte) AS 'Quantité'
+-- FROM prendre_casque
+-- INNER JOIN bataille ON bataille.id_bataille = prendre_casque.id_bataille
+-- GROUP BY nom_bataille
+-- ORDER BY 'Quantité'
+-- LIMIT 1
+
+/* 11 Combien  existe-t-il  de  casques  de  chaque  type  et  quel  est  leur  coût  total  ?  (classés  par nombre décroissant) */
+-- SELECT nom_type_casque, SUM(cout_casque) AS 'cout total'
+-- FROM casque
+-- INNER JOIN type_casque ON type_casque.id_type_casque = casque.id_type_casque
+-- GROUP BY casque.id_type_casque
+-- ORDER BY SUM(cout_casque) DESC
+
