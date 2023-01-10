@@ -34,6 +34,17 @@
 -- GROUP BY potion.id_potion
 -- ORDER BY SUM(cout_ingredient * qte) DESC
 
+/* A. Ajoutez le personnage suivant : Champdeblix, agriculteur résidant à la ferme Hantassion de Rotomagus. */
+-- INSERT INTO personnage (nom_personnage,id_specialite,adresse_personnage,id_lieu)
+-- 	VALUES ('Champdeblix',12,'Ferme Hantassion',6)
+
+/* B. Autorisez Bonemine à boire de la potion magique, elle est jalouse d'Iélosubmarine... */
+-- INSERT INTO autoriser_boire (id_potion,id_personnage)
+-- 	VALUES (1,12)
+
+/* C. Supprimez les casques grecs qui n'ont jamais été pris lors d'une bataille. */
+
+
 /* 7 Nom des ingrédients + coût + quantité de chaque ingrédient qui composent la potion 'Santé'. */
 -- SELECT nom_ingredient AS 'Ingrédient', cout_ingredient AS 'Cout/u', qte AS 'Quantité'
 -- FROM potion,composer,ingredient
